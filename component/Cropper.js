@@ -872,10 +872,10 @@ class Cropper extends Component {
                   }
                 >
                 </span>
-                <span style={deepExtend({}, styles.gridLine, styles.lineMW)} />
-                <span style={deepExtend({}, styles.gridLine, styles.lineME)} />
-                <span style={deepExtend({}, styles.gridLine, styles.lineMN)} />
                 <span style={deepExtend({}, styles.gridLine, styles.lineMS)} />
+                <span style={deepExtend({}, styles.gridLine, styles.lineMN)} />
+                <span style={deepExtend({}, styles.gridLine, styles.lineME)} />
+                <span style={deepExtend({}, styles.gridLine, styles.lineMW)} />
               </div>
             </div>
             : null
@@ -1131,11 +1131,18 @@ const defaultStyles = {
     height: '100%',
     background: 'transparent'
   },
-  lineMW: {
-    left: '33%',
-    top: 0,
-    width: 0,
-    height: '100%',
+  lineMS: {
+    left: 0,
+    top: '66%',
+    width: '100%',
+    height: 0,
+    background: 'transparent'
+  },
+  lineMN: {
+    left: 0,
+    top: '33%',
+    width: '100%',
+    height: 0,
     background: 'transparent'
   },
   lineME: {
@@ -1145,18 +1152,11 @@ const defaultStyles = {
     height: '100%',
     background: 'transparent'
   },
-  lineMD: {
-    left: 0,
-    top: '33%',
-    width: '100%',
-    height: 0,
-    background: 'transparent'
-  },
-  lineMS: {
-    left: 0,
-    top: '66%',
-    width: '100%',
-    height: 0,
+  lineMW: {
+    left: '33%',
+    top: 0,
+    width: 0,
+    height: '100%',
     background: 'transparent'
   }
 }
