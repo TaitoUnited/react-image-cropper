@@ -605,7 +605,6 @@ class Cropper extends Component {
         }
       >
         <img
-          crossOrigin="anonymous"
           src={src}
           width={imgWidth}
           height={imgHeight}
@@ -693,7 +692,6 @@ class Cropper extends Component {
                 >
                   <img
                     src={src}
-                    crossOrigin="anonymous"
                     width={imgWidth}
                     height={imgHeight}
                     style={
