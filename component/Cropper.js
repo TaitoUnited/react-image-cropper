@@ -595,7 +595,7 @@ class Cropper extends Component {
       src
     } = this.state
 
-    const { disabled } = this.props
+    const { disabled, crossOrigin } = this.props
 
     const imageNode = (
       <div
@@ -615,6 +615,7 @@ class Cropper extends Component {
             deepExtend({}, styles.img, styles.source_img)
           }
           onLoad={this.imgOnLoad.bind(this)}
+          crossOrigin={crossOrigin}
         />
       </div>
     )
@@ -705,6 +706,7 @@ class Cropper extends Component {
                     ref={
                       ref => { this.cloneImg = ref }
                     }
+                    crossOrigin={crossOrigin}
                   />
                 </div>
 
@@ -896,7 +898,8 @@ Cropper.propTypes = {
   styles: PropTypes.object,
   onImgLoad: PropTypes.func,
   beforeImgLoad: PropTypes.func,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  crossOrigin: PropTypes.string
 }
 
 Cropper.defaultProps = {
@@ -909,7 +912,8 @@ Cropper.defaultProps = {
   originY: 0,
   styles: {},
   onImgLoad: function () {},
-  beforeImgLoad: function () {}
+  beforeImgLoad: function () {},
+  crossOrigin: null
 }
 
 /*
